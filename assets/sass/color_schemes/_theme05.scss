@@ -1,0 +1,143 @@
+
+$theme05-color-primary: #549369;
+$theme05-color-primary-hightlight: #EDE7D0;
+$theme05-color-secondary: #034F39;
+$theme05-color-secondary-highlight: #B2D2A4;
+
+$theme05-style-border: 2px solid $theme05-color-secondary;
+$theme05-shadow-box: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+.theme05 {
+
+    // ---------- GENERAL ----------
+
+    color: $theme05-color-secondary;
+    background-color: $theme05-color-primary;
+
+    h1,h3 {
+        color: $theme05-color-secondary;
+    }
+    h2 {
+        color: $theme05-color-primary-hightlight;
+    }
+    header {
+        background: $theme05-color-primary-hightlight;
+        border-bottom: $theme05-style-border;
+        box-shadow: $theme05-shadow-box;
+    }
+
+    // ---------- TOOLTIP ----------
+    #tooltip {
+        background-color: $theme05-color-secondary-highlight;
+        color: $theme05-color-secondary;
+    }
+
+    // ---------- TABLE ----------
+    .table-wrapper {
+
+        table {
+            box-shadow: $theme05-shadow-box;
+            border-bottom: $theme05-style-border;
+        }
+    
+        th {
+            background-color: $theme05-color-secondary;
+            color: $theme05-color-primary-hightlight;
+        }
+    
+        tr {
+            background-color: $theme05-color-primary-hightlight;
+    
+            &:nth-of-type(even) {
+                background-color: darken($theme05-color-primary-hightlight, 8%);
+            }
+        }
+    }
+
+    // ---------- TABS -----------
+
+    .tabs {
+        background-color: $theme05-color-primary-hightlight;
+        border-top: $theme05-style-border;
+        border-bottom: $theme05-style-border;
+
+        .tab-link {
+
+            color: $theme05-color-secondary;
+
+            &:hover {
+                background-color: $theme05-color-secondary-highlight;
+                color: $theme05-color-secondary;
+            }
+
+            &.active {
+                background-color: $theme05-color-secondary;
+                color: $theme05-color-primary-hightlight;
+            }
+        }
+
+        ul {
+            li {
+                &:nth-of-type(even) {
+                    background-color: darken($theme05-color-primary-hightlight, 8%);
+                }
+
+                &.CONN {
+                    &::before {
+                        background-color: $theme05-color-secondary;
+                        color: $theme05-color-primary-hightlight;
+                    }
+                }
+                &.DISC {
+                    &::before {
+                        background-color: $theme05-color-secondary-highlight;
+                        color: $theme05-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // ------ CUSTOM SELECT ------
+
+    .select-box {
+    
+        .select {
+    
+            .select-title {
+                background-color: $theme05-color-secondary;
+                color: $theme05-color-primary-hightlight;
+            }
+            .select-options {
+                
+                background: $theme05-color-secondary-highlight;
+                .select-option {
+                    color: $theme05-color-secondary;
+                    border-top: 1px solid $theme05-color-secondary;
+                    &:last-child {
+                        border-bottom: 1px solid $theme05-color-secondary;
+                    }
+                    &:hover {
+                        background-color: darken($theme05-color-secondary-highlight, 8%);
+                    }
+    
+                    &.selected {
+                        background-color: $theme05-color-secondary;
+                        color: $theme05-color-primary-hightlight;
+                    }
+                }
+            }
+    
+            .arrow {
+               &::before {
+                    background-color: $theme05-color-primary-hightlight;
+                }
+                &::after {
+                    background-color: $theme05-color-primary-hightlight;
+                }
+            }
+        }
+    }
+}

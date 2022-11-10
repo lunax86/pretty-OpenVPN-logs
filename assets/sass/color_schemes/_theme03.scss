@@ -1,0 +1,139 @@
+
+$theme03-color-primary: #17223B;
+$theme03-color-primary-hightlight: #263859;
+$theme03-color-secondary: #ef768a;
+$theme03-color-secondary-highlight: #586274;
+
+$theme03-style-border: 2px solid $theme03-color-secondary;
+$theme03-shadow-box: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+.theme03 {
+
+    // ---------- GENERAL ----------
+    background-color: $theme03-color-primary;
+    color: $theme03-color-secondary;
+
+    h1,h2,h3 {
+        color: $theme03-color-secondary;
+    }
+    header {
+        background: $theme03-color-primary-hightlight;
+        border-bottom: $theme03-style-border;
+        box-shadow: $theme03-shadow-box;
+    }
+
+    // ---------- TOOLTIP ----------
+    #tooltip {
+        background-color: $theme03-color-secondary-highlight;
+        color: $theme03-color-secondary;
+    }
+
+    // ---------- TABLE ----------
+    .table-wrapper {
+
+        table {
+            box-shadow: $theme03-shadow-box;
+            border-bottom: $theme03-style-border;
+        }
+    
+        th {
+            background-color: $theme03-color-secondary;
+            color: $theme03-color-primary-hightlight;
+        }
+    
+        tr {
+            background-color: $theme03-color-primary-hightlight;
+    
+            &:nth-of-type(even) {
+                background-color: darken($theme03-color-primary-hightlight, 3%);
+            }
+        }
+    }
+
+    // ---------- TABS -----------
+
+    .tabs {
+        background-color: $theme03-color-primary-hightlight;
+        border-top: $theme03-style-border;
+        border-bottom: $theme03-style-border;
+
+        .tab-link {
+
+            color: $theme03-color-secondary;
+
+            &:hover {
+                background-color: $theme03-color-secondary-highlight;
+                color: $theme03-color-secondary;
+            }
+
+            &.active {
+                background-color: $theme03-color-secondary;
+                color: $theme03-color-primary-hightlight;
+            }
+        }
+
+        ul {
+            li {
+                &:nth-of-type(even) {
+                    background-color: darken($theme03-color-primary-hightlight, 3%);
+                }
+
+                &.CONN {
+                    &::before {
+                        background-color: $theme03-color-secondary;
+                        color: $theme03-color-primary;
+                    }
+                }
+                &.DISC {
+                    &::before {
+                        background-color: $theme03-color-secondary-highlight;
+                        color: $theme03-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // ------ CUSTOM SELECT ------
+
+    .select-box {
+    
+        .select {
+    
+            .select-title {
+                background-color: $theme03-color-secondary;
+                color: $theme03-color-primary-hightlight;
+            }
+            .select-options {
+                
+                background: $theme03-color-secondary-highlight;
+                .select-option {
+                    color: $theme03-color-secondary;
+                    border-top: 1px solid $theme03-color-secondary;
+                    &:last-child {
+                        border-bottom: 1px solid $theme03-color-secondary;
+                    }
+                    &:hover {
+                        background-color: darken($theme03-color-secondary-highlight, 3%);
+                    }
+    
+                    &.selected {
+                        background-color: $theme03-color-secondary;
+                        color: $theme03-color-primary-hightlight;
+                    }
+                }
+            }
+    
+            .arrow {
+               &::before {
+                    background-color: $theme03-color-primary-hightlight;
+                }
+                &::after {
+                    background-color: $theme03-color-primary-hightlight;
+                }
+            }
+        }
+    }
+}

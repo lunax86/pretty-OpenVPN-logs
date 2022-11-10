@@ -1,0 +1,96 @@
+
+.select-box {
+
+    position: relative;
+    user-select: none;
+    width: 200px;
+
+    &.open .select {
+        .select-options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    .select {
+        font-size: 0.9em;
+
+        .select-title {
+            cursor: pointer;
+            position: relative;
+            padding: 8px 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .select-options {
+            list-style: none;
+            position: absolute;
+            display: block;
+            top: 100%;
+            left: 0;
+            right: 0;
+            transition: all 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            .select-option {
+                position: relative;
+                display: block;
+                padding: 8px 16px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: background-color .2s ease-out;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                /*&.selected {
+                    font-weight: bold;
+                }*/
+            }
+        }
+
+        .arrow {
+            position: relative;
+            height: 15px;
+            width: 15px;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                width: 0.10rem;
+                height: 100%;
+                transition: all .2s ease-out;
+           }
+           &::before {
+                left: -5px;
+                transform: rotate(45deg);
+            }
+            &::after {
+                left: 5px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &.open {
+        .arrow {
+            &::before {
+                left: -5px;
+                transform: rotate(-45deg);
+            }
+            &::after {
+                left: 5px;
+                transform: rotate(45deg);
+           }
+
+        }
+    }
+}
+

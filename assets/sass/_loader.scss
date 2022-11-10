@@ -1,0 +1,26 @@
+#loader {
+
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 100px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .3s, opacity .3s linear;
+    /* loader is unaffected by color scheme */ background-color: #333;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    p {
+        font-size: xx-large;
+        /* loader is unaffected by color scheme */  color: #97b8ac;
+        font-weight: 200;
+    }
+
+}
+
